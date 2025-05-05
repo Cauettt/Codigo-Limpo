@@ -1,7 +1,4 @@
-/**
- * Exercício 4:
- * Melhore a função de formatação de tempo eliminando os números mágicos.
- */
+
 
 function formatarTempo(segundos) {
   const segundosPorHora = 3600
