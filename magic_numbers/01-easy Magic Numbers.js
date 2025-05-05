@@ -1,7 +1,4 @@
-/**
- * Exercício 1: 
- * Refatore o código abaixo substituindo os números mágicos por constantes com nomes significativos.
- */
+
 
 function calcularDesconto(valor) {
   const descontoValorSuperiorA100 = 0.1
