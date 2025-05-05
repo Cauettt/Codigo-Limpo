@@ -1,25 +1,26 @@
-/**
- * Exercício 5:
- * Refatore esta função de validação de cartão de crédito, eliminando todos os números mágicos.
- */
 
 function validarCartaoCredito(numero) {
+  const primeiroNumeroVisa = 4
+  const primeiroNumeroMaster = 5
+  const primeiroNumeroAmerican = 34
+  const primeiroNumeroAmerican2 = 37
+
   if (numero.length !== 16 && numero.length !== 15 && numero.length !== 13) {
     return false;
   }
 
   if (
-    numero.startsWith("4") &&
+    numero.startsWith(primeiroNumeroVisa) &&
     (numero.length === 16 || numero.length === 13)
   ) {
     return "Visa";
-  } else if (numero.startsWith("5") && numero.length === 16) {
+  } else if (numero.startsWith(primeiroNumeroMaster) && numero.length === 16) {
     const segundoDigito = parseInt(numero.charAt(1));
     if (segundoDigito >= 1 && segundoDigito <= 5) {
       return "MasterCard";
     }
   } else if (
-    (numero.startsWith("34") || numero.startsWith("37")) &&
+    (numero.startsWith(primeiroNumeroAmerican) || numero.startsWith(primeiroNumeroAmerican2)) &&
     numero.length === 15
   ) {
     return "American Express";
